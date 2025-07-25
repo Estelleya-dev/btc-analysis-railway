@@ -1102,3 +1102,11 @@ def health():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+# 确保在Railway上正确运行
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    print(f"🚀 启动服务器，端口: {port}")
+    app.run(host='0.0.0.0', port=port, debug=False)
+
+# Railway部署需要的应用实例
+application = app
